@@ -1,24 +1,34 @@
-programa {
+programa
+{
+    funcao inicio()
+    {
+        inteiro matriz[3][3]
+        inteiro l
+        inteiro c
+        inteiro maior
 
- funcao real calcula_preco_lote(real custo, real margem){
+        para(l = 0; l < 3; l++)
+        {
+            para(c = 0; c < 3; c++)
+            {
+                escreva("Digite o valor [", l, "][", c, "]: ")
+                leia(matriz[l][c])
+            }
+        }
 
- retorne custo + (custo * margem / 100)
- }
+        maior = matriz[0][0]
 
-  funcao inicio() {
+        para(l = 0; l < 3; l++)
+        {
+            para(c = 0; c < 3; c++)
+            {
+                se(matriz[l][c] > maior)
+                {
+                    maior = matriz[l][c]
+                }
+            }
+        }
 
-    real custo
-    real margem
-    real preco_final
-
-    escreva("Digite o custo do lote: ")
-    leia(custo)
-    
-   escreva("Digite a margem de lucro (%): ")
-   leia(margem)
-
-   preco_final = calcula_preco_lote(custo, margem)
-
-   escreva("Preco final de venda: R$ ", preco_final)
-  }
+        escreva("O maior valor da matriz e: ", maior)
+    }
 }

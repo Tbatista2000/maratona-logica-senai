@@ -1,33 +1,26 @@
-programa {
+programa
+{
+    funcao inicio()
+    {
+        inteiro matriz[3][3]
+        inteiro l
+        inteiro c
+        inteiro soma = 0
 
-  funcao real obter_maior_pressao(real pressao1, real pressao2) {
+        para(l = 0; l < 3; l++)
+        {
+            para(c = 0; c < 3; c++)
+            {
+                escreva("Digite o valor [", l, "][", c, "]: ")
+                leia(matriz[l][c])
+            }
+        }
 
-    se(pressao1 > pressao2) {
+        para(l = 0; l < 3; l++)
+        {
+            soma = soma + matriz[l][l]
+        }
 
-      retorne pressao1
-
+        escreva("Soma da diagonal principal: ", soma)
     }
-
-      retorne pressao2
-  }
-
-    funcao inicio() {
-
-    real pressao1
-    real pressao2
-    real maior_pressao
-
-    escreva("Digite a primeira pressao: ")
-    leia(pressao1)
-
-    escreva("Digite a segunda pressao: ")
-    leia(pressao2)
-
-    maior_pressao = obter_maior_pressao(pressao1, pressao2)
-
-    escreva("Maior pressao registrada: ", maior_pressao)
-
-
-    
-  }
 }

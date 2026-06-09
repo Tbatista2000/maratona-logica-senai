@@ -1,22 +1,23 @@
-programa {
+programa
+{
+    funcao inicio()
+    {
+        inteiro matriz[3][3]
+        inteiro l
+        inteiro c
+        inteiro soma = 0
 
-  funcao real celsius_para_fahrenheit(real celsius) {
+        para(l = 0; l < 3; l++)
+        {
+            para(c = 0; c < 3; c++)
+            {
+                escreva("Digite o valor [", l, "][", c, "]: ")
+                leia(matriz[l][c])
+            }
+        }
 
-    retorne (celsius * 9 / 5 ) + 32
+        soma = matriz[0][2] + matriz[1][1] + matriz[2][0]
 
-  }
-
-  funcao inicio() {
-
-    real celsius
-    real fahrenheit 
-
-    escreva("Digite a temperatura em Celsius: ")
-    leia(celsius)
-
-    fahrenheit = celsius_para_fahrenheit(celsius)
-
-    escreva("Temperatura em fahrenheit: ", fahrenheit)
-    
-  }
+        escreva("Soma da diagonal secundaria: ", soma)
+    }
 }

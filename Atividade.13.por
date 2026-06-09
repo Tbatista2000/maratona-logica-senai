@@ -1,26 +1,22 @@
-programa {
+programa
+{
+    funcao inicio()
+    {
+        inteiro matriz[3][3]
+        inteiro l, c
+        inteiro soma = 0
 
-  funcao logico validar_acesso(cadeia senha) {
+        para(l = 0; l < 3; l++)
+        {
+            para(c = 0; c < 3; c++)
+            {
+                escreva("Digite o valor [", l, "][", c, "]: ")
+                leia(matriz[l][c])
 
-     se(senha == "SENAI4.0") {
+                soma = soma + matriz[l][c]
+            }
+        }
 
-      retorne verdadeiro
-
-     }
-
-     retorne falso
-  }
-
-  funcao inicio() {
-
-    cadeia senha
-    logico acesso
-
-    escreva("Digitar senha: ")
-    leia(senha)
-
-    acesso = validar_acesso(senha)
-    escreva("Acesso liberado: ", acesso)
-    
-  }
+        escreva("\nSoma dos elementos = ", soma)
+    }
 }

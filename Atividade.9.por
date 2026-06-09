@@ -1,21 +1,25 @@
 programa {
 
-  funcao exibir_menu_principal(){
+  funcao imprimirInvertido(inteiro vetor[]) {
 
-   escreva("================================\n")
-   escreva("      MENU DE OPERAÇÕES      \n")
-   escreva("================================\n")
-   escreva("1 - Iniciar linha\n")
-   escreva("2 - Pausar linha\n")
-   escreva("3 - Relatorio Tecnico\n")
-   escreva("0 - Desligar o Sistema\n")
-   escreva("================================")
+  inteiro i 
 
+  para (i = 4; i >= 0; i--) {
+  escreva(vetor[i]," ")
+  }
   }
 
   funcao inicio() {
 
-    exibir_menu_principal()
+    inteiro numeros[5]
+
+    numeros[0] = 10
+    numeros[1] = 25
+    numeros[2] = 8
+    numeros[3] = 40
+    numeros[4] = 15
+
+    imprimirInvertido(numeros)
     
   }
 }

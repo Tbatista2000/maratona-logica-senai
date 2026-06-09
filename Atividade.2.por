@@ -1,25 +1,27 @@
 programa {
 
-  funcao resgistrar_log(cadeia maquina, inteiro erro){
+ funcao carregaVetor(inteiro vetor[]) {
 
-escreva("[LOG INDUSTRIAL] Máquina: ", maquina, " | Código de erro: ", erro)
+  inteiro i
 
+  para (i = 0; i < 5; i++) {
+
+  escreva("Digite um numero: ")
+  leia(vetor[i])
   }
-
-
+ }
 
   funcao inicio() {
 
-    cadeia nome_maquina
-    inteiro codigo_erro
+    inteiro numeros[5]
+    inteiro i
 
-    escreva("Digite o nome da máquina: ")
-    leia(nome_maquina)
+    carregaVetor(numeros)
+    escreva("\nValores digitados: \n")
 
-    escreva("Digite o código do erro: ")
-    leia(codigo_erro)
-
-    resgistrar_log(nome_maquina, codigo_erro)
+    para (i = 0; i < 5; i++) {
+      escreva(numeros[i], " ")
+    }
     
   }
 }

@@ -1,26 +1,36 @@
-programa {
- 
-  funcao real calcular_oee(real tempo_producao, real tempo_total) {
+programa
+{
+    funcao inicio()
+    {
+        inteiro matriz[3][3]
+        inteiro l
+        inteiro c
+        inteiro numero
+        inteiro contador = 0
 
-  retorne (tempo_producao * 100) / tempo_total
+        para(l = 0; l < 3; l++)
+        {
+            para(c = 0; c < 3; c++)
+            {
+                escreva("Digite o valor [", l, "][", c, "]: ")
+                leia(matriz[l][c])
+            }
+        }
 
-  }
+        escreva("Digite o numero que deseja procurar: ")
+        leia(numero)
 
-  funcao inicio() {
+        para(l = 0; l < 3; l++)
+        {
+            para(c = 0; c < 3; c++)
+            {
+                se(matriz[l][c] == numero)
+                {
+                    contador = contador + 1
+                }
+            }
+        }
 
-    real tempo_producao
-    real tempo_total
-    real oee 
-
-    escreva("Digite o tempo de produção: ")
-    leia(tempo_producao)
-
-    escreva("Digite o tempo total do turno: ")
-    leia(tempo_total)
-
-    oee = calcular_oee(tempo_producao, tempo_total)
-
-    escreva("OEE da máquina: ", oee, "%")
-    
-  }
+        escreva("O numero aparece ", contador, " vez(es) na matriz.")
+    }
 }

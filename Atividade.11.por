@@ -1,22 +1,28 @@
 programa {
+  funcao inicio() {
 
- funcao real metros_para_milimetros(real metros) {
+    inteiro matriz[3][3]
+    inteiro l, c
 
- retorne metros * 1000
+    para(l = 0; l < 3; l++)
+    {
+    para(c = 0; c < 3; c++)
+    {
+      escreva("Digite o valor [", l, "][", c, "]: ")
+      leia(matriz[l][c])
+    }
+    }
 
- }
-
- funcao inicio() {
-
- real metros
- real milimetros
-
- escreva("Digite a medida em metros: ")
- leia(metros)
-
- milimetros = metros_para_milimetros(metros)
-
- escreva("Valor milimetros: ", milimetros)
+    escreva("'\nMatriz:\n")
+    para(l = 0; l < 3; l++ )
+    {
+    para(c = 0; c < 3; c++ )
+   { 
+   escreva(matriz[l][c], "\t")
+ 
+  }
+  escreva("\n")
+    }
 
     
   }

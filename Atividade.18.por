@@ -1,21 +1,30 @@
-programa {
+programa
+{
+    funcao inicio()
+    {
+        inteiro matriz[3][3]
+        inteiro l
+        inteiro c
+        inteiro linha
+        inteiro soma = 0
 
-  funcao real calcular_inss_operario(real salario) {
+        para(l = 0; l < 3; l++)
+        {
+            para(c = 0; c < 3; c++)
+            {
+                escreva("Digite o valor [", l, "][", c, "]: ")
+                leia(matriz[l][c])
+            }
+        }
 
-  retorne salario * 0.11
+        escreva("Digite a linha (0, 1 ou 2): ")
+        leia(linha)
 
-  }
-  funcao inicio() {
+        para(c = 0; c < 3; c++)
+        {
+            soma = soma + matriz[linha][c]
+        }
 
-    real salario
-    real desconto
-
-    escreva("Digite o sálario bruto: ")
-    leia(salario)
-
-    desconto = calcular_inss_operario(salario)
-
-    escreva("Valor do desconto do INSS: R$ ", desconto)
-    
-  }
+        escreva("Soma da linha ", linha, ": ", soma)
+    }
 }

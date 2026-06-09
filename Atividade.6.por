@@ -1,28 +1,33 @@
 programa {
 
-  funcao disparar_alarme(inteiro risco) {
+  funcao inteiro encontrarMenor(inteiro vetor[]) {
 
-se(risco == 1) {
+  inteiro i
+  inteiro menor
 
-  escreva("Aviso Visual")
+  menor = vetor[0]
 
-} senao se (risco == 2) {
-
-  escreva("Aviso Visual + Sonoro")
-
-} senao se (risco == 3){
-
-  escreva("EVACUAR IMEDIATAMENTE")
-}
-
+  para(i = 1; i < 5; i++) {
+ se (vetor[i] < menor) {
+  menor = vetor[i]
+ }
   }
+ retorne menor
+  }
+
   funcao inicio() {
 
-    inteiro nivel_risco
+    inteiro numeros[5]
+    inteiro menorNumero
 
-    escreva("Digite o nivel de risco (1 a 3): ")
-    leia(nivel_risco)
-    disparar_alarme(nivel_risco)
+    numeros[0] = 10
+    numeros[1] = 25
+    numeros[2] = 8
+    numeros[3] = 40
+    numeros[4] = 15
+
+    menorNumero = encontrarMenor(numeros)
+    escreva("Menor valor = ", menorNumero)
     
   }
 }

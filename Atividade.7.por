@@ -1,34 +1,30 @@
 programa {
 
- funcao gerar_relatorio_refugo(inteiro aprovadas, inteiro rejeitadas) {
+  funcao contarPares(inteiro vetor[]) {
+  inteiro i 
+  inteiro quantidade = 0
 
- inteiro total
- real percentual
+  para ( i = 0; i < 5; i++) {
 
- total = aprovadas + rejeitadas
+ se (vetor[i] % 2 == 0) {
 
- percentual = (rejeitadas * 100.0) / total
-
- escreva("====== RELATÓRIO DE REFUGO ====== \n")
- escreva("Peças aprovadas ", aprovadas, "\n")
- escreva("Peças rejeitadas ", rejeitadas, "\n")
- escreva("Percentual de refugo ", percentual, "%")
+  quantidade = quantidade + 1
  }
+  }
 
+ escreva("Quantidade de pares: ", quantidade)
+
+  }
   funcao inicio() {
 
-inteiro aprovadas
-inteiro rejeitadas
+    inteiro numeros[5]
 
-escreva("Digite a quantidade de peças aprovadas: ")
-leia(aprovadas)
+    numeros[0] = 10
+    numeros[1] = 25
+    numeros[2] = 8
+    numeros[3] = 40
+    numeros[4] = 15
 
-escreva("Digite a quantidade de peças rejeitadas: ")
-leia(rejeitadas)
-
-gerar_relatorio_refugo(aprovadas, rejeitadas)
-
-
-    
+    contarPares(numeros)
   }
 }

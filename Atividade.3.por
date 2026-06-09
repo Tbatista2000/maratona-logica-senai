@@ -1,33 +1,30 @@
 programa {
 
-  funcao mostrar_painel(logico esteira, inteiro pecas) {
+  funcao inteiro somarElementos(inteiro vetor[]) {
 
-    escreva("==============")
+  inteiro i
+  inteiro soma = 0
 
-    se(esteira){
-
-      escreva(" Esteira: LIGADA ")
-    } senao {
-      escreva(" Esteira: DESLIGADA ")
-    }
-
-escreva("Peças Produzidas: ", pecas)
-
-escreva("==============")
+  para (i = 0; i < 5; i++) {
+ soma = soma + vetor[i]
+  }
+ retorne soma
 
   }
+
   funcao inicio() {
 
-    logico estado_esteira
-    inteiro total_pecas
+    inteiro numeros[5]
+    inteiro resultado
 
-    escreva("A esteira está ligada? (verdairo/falso): ")
-    leia(estado_esteira)
+    numeros[0] = 10
+    numeros[1] = 20
+    numeros[2] = 30
+    numeros[3] = 40
+    numeros[4] = 50
 
-    escreva("Digite total de peças produzidas: ")
-    leia(total_pecas)
-
-    mostrar_painel(estado_esteira, total_pecas)
+    resultado = somarElementos(numeros)
+    escreva("soma = ", resultado)
     
   }
 }

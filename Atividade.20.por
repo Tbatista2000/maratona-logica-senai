@@ -1,31 +1,51 @@
-programa {
+programa
+{
+    funcao inicio()
+    {
+        inteiro A[3][3]
+        inteiro B[3][3]
+        inteiro R[3][3]
+        inteiro l
+        inteiro c
 
- funcao cadeia classificar_dimensao(real comprimento) {
+        escreva("Digite os valores da matriz A:\n")
 
- se (comprimento < 50.0){
+        para(l = 0; l < 3; l++)
+        {
+            para(c = 0; c < 3; c++)
+            {
+                leia(A[l][c])
+            }
+        }
 
- retorne "pequena"
- }
- senao se (comprimento <= 100.0) {
+        escreva("Digite os valores da matriz B:\n")
 
- retorne "Medida"
+        para(l = 0; l < 3; l++)
+        {
+            para(c = 0; c < 3; c++)
+            {
+                leia(B[l][c])
+            }
+        }
 
- } senao {
+        para(l = 0; l < 3; l++)
+        {
+            para(c = 0; c < 3; c++)
+            {
+                R[l][c] = A[l][c] + B[l][c]
+            }
+        }
 
- retorne "Grande"
+        escreva("\nMatriz Resultante:\n")
 
+        para(l = 0; l < 3; l++)
+        {
+            para(c = 0; c < 3; c++)
+            {
+                escreva(R[l][c], "\t")
+            }
 
- }}
-
-  funcao inicio() {
-
-    real comprimento
-    cadeia classificacao
-
-    escreva("Digita comprimento da chapa: ")
-    leia(comprimento)
-
-    classificacao = classificar_dimensao(comprimento)
-    escreva("Classificacao: ", classificacao)
-  }
+            escreva("\n")
+        }
+    }
 }
