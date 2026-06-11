@@ -1,23 +1,28 @@
 programa
 {
-    funcao inicio()
-    {
-        inteiro matriz[3][3]
-        inteiro l
-        inteiro c
-        inteiro soma = 0
+	funcao inicio()
+	{
+		inteiro matriz[2][2]
+		inteiro l, c
 
-        para(l = 0; l < 3; l++)
-        {
-            para(c = 0; c < 3; c++)
-            {
-                escreva("Digite o valor [", l, "][", c, "]: ")
-                leia(matriz[l][c])
-            }
-        }
+		para(l = 0; l < 2; l++)
+		{
+			para(c = 0; c < 2; c++)
+			{
+				escreva("Digite [", l, "][", c, "]: ")
+				leia(matriz[l][c])
+			}
+		}
 
-        soma = matriz[0][2] + matriz[1][1] + matriz[2][0]
+		escreva("\nMatriz:\n")
 
-        escreva("Soma da diagonal secundaria: ", soma)
-    }
+		para(l = 0; l < 2; l++)
+		{
+			para(c = 0; c < 2; c++)
+			{
+				escreva(matriz[l][c], " ")
+			}
+			escreva("\n")
+		}
+	}
 }

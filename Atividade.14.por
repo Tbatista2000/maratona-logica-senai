@@ -1,34 +1,19 @@
 programa
 {
-    funcao inicio()
-    {
-        inteiro matriz[3][3]
-        inteiro l
-        inteiro c
-        inteiro maior
+	funcao inicio()
+	{
+		inteiro matriz[2][2]
 
-        para(l = 0; l < 3; l++)
-        {
-            para(c = 0; c < 3; c++)
-            {
-                escreva("Digite o valor [", l, "][", c, "]: ")
-                leia(matriz[l][c])
-            }
-        }
+		escreva("Digite o valor [0][0]: ")
+		leia(matriz[0][0])
 
-        maior = matriz[0][0]
+		escreva("Digite o valor [1][0]: ")
+		leia(matriz[1][0])
 
-        para(l = 0; l < 3; l++)
-        {
-            para(c = 0; c < 3; c++)
-            {
-                se(matriz[l][c] > maior)
-                {
-                    maior = matriz[l][c]
-                }
-            }
-        }
+		matriz[0][1] = matriz[0][0]
+		matriz[1][1] = matriz[1][0]
 
-        escreva("O maior valor da matriz e: ", maior)
-    }
+		escreva(matriz[0][0], " ", matriz[0][1], "\n")
+		escreva(matriz[1][0], " ", matriz[1][1])
+	}
 }

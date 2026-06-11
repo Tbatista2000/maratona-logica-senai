@@ -1,36 +1,21 @@
 programa
 {
-    funcao inicio()
-    {
-        inteiro matriz[3][3]
-        inteiro l
-        inteiro c
-        inteiro numero
-        inteiro contador = 0
+	funcao inicio()
+	{
+		inteiro matriz[2][2]
 
-        para(l = 0; l < 3; l++)
-        {
-            para(c = 0; c < 3; c++)
-            {
-                escreva("Digite o valor [", l, "][", c, "]: ")
-                leia(matriz[l][c])
-            }
-        }
+		leia(matriz[0][0])
+		leia(matriz[0][1])
+		leia(matriz[1][0])
+		leia(matriz[1][1])
 
-        escreva("Digite o numero que deseja procurar: ")
-        leia(numero)
-
-        para(l = 0; l < 3; l++)
-        {
-            para(c = 0; c < 3; c++)
-            {
-                se(matriz[l][c] == numero)
-                {
-                    contador = contador + 1
-                }
-            }
-        }
-
-        escreva("O numero aparece ", contador, " vez(es) na matriz.")
-    }
+		se(matriz[0][0] == matriz[0][1])
+		{
+			escreva("Os valores da primeira linha sao iguais")
+		}
+		senao
+		{
+			escreva("Os valores da primeira linha sao diferentes")
+		}
+	}
 }

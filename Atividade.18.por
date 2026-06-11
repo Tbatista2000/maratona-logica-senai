@@ -1,30 +1,23 @@
 programa
 {
-    funcao inicio()
-    {
-        inteiro matriz[3][3]
-        inteiro l
-        inteiro c
-        inteiro linha
-        inteiro soma = 0
+	funcao inicio()
+	{
+		inteiro matriz[3][3]
+		inteiro l, c
 
-        para(l = 0; l < 3; l++)
-        {
-            para(c = 0; c < 3; c++)
-            {
-                escreva("Digite o valor [", l, "][", c, "]: ")
-                leia(matriz[l][c])
-            }
-        }
+		para(l = 0; l < 3; l++)
+		{
+			para(c = 0; c < 3; c++)
+			{
+				leia(matriz[l][c])
+			}
+		}
 
-        escreva("Digite a linha (0, 1 ou 2): ")
-        leia(linha)
+		escreva("Linha 0:\n")
 
-        para(c = 0; c < 3; c++)
-        {
-            soma = soma + matriz[linha][c]
-        }
-
-        escreva("Soma da linha ", linha, ": ", soma)
-    }
+		para(c = 0; c < 3; c++)
+		{
+			escreva(matriz[0][c], " ")
+		}
+	}
 }

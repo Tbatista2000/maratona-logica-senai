@@ -1,28 +1,23 @@
 programa
 {
-    funcao inicio()
-    {
-        inteiro matriz[3][3]
-        inteiro l, c
+	funcao inicio()
+	{
+		cadeia matriz[2][2]
 
-        para(l = 0; l < 3; l++)
-        {
-            para(c = 0; c < 3; c++)
-            {
-                escreva("Digite o valor [", l, "][", c, "]: ")
-                leia(matriz[l][c])
-            }
-        }
+		escreva("Quem sentará na Linha 0, Coluna 0? ")
+		leia(matriz[0][0])
 
-        escreva("\nMatriz carregada:\n")
+		escreva("Quem sentará na Linha 0, Coluna 1? ")
+		leia(matriz[0][1])
 
-        para(l = 0; l < 3; l++)
-        {
-            para(c = 0; c < 3; c++)
-            {
-                escreva(matriz[l][c], "\t")
-            }
-            escreva("\n")
-        }
-    }
+		escreva("Quem sentará na Linha 1, Coluna 0? ")
+		leia(matriz[1][0])
+
+		escreva("Quem sentará na Linha 1, Coluna 1? ")
+		leia(matriz[1][1])
+
+		escreva("\n")
+		escreva(matriz[0][0], " ", matriz[0][1], "\n")
+		escreva(matriz[1][0], " ", matriz[1][1])
+	}
 }

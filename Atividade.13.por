@@ -1,22 +1,20 @@
 programa
 {
-    funcao inicio()
-    {
-        inteiro matriz[3][3]
-        inteiro l, c
-        inteiro soma = 0
+	funcao inicio()
+	{
+		real matriz[2][2]
 
-        para(l = 0; l < 3; l++)
-        {
-            para(c = 0; c < 3; c++)
-            {
-                escreva("Digite o valor [", l, "][", c, "]: ")
-                leia(matriz[l][c])
+		escreva("Digite o valor [0][0]: ")
+		leia(matriz[0][0])
 
-                soma = soma + matriz[l][c]
-            }
-        }
+		escreva("Digite o valor [0][1]: ")
+		leia(matriz[0][1])
 
-        escreva("\nSoma dos elementos = ", soma)
-    }
+		escreva("Digite o valor [1][0]: ")
+		leia(matriz[1][0])
+
+		matriz[1][1] = (matriz[0][0] + matriz[0][1] + matriz[1][0]) / 3
+
+		escreva("Media armazenada em [1][1]: ", matriz[1][1])
+	}
 }

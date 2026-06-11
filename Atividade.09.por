@@ -4,22 +4,21 @@ programa
 	{
 		inteiro vetor[5]
 		inteiro i
-		inteiro alvo
+		inteiro contador = 0
 
 		para(i = 0; i < 5; i++)
 		{
 			leia(vetor[i])
 		}
 
-		escreva("Digite o numero alvo: ")
-		leia(alvo)
-
 		para(i = 0; i < 5; i++)
 		{
-			se(vetor[i] == alvo)
+			se(vetor[i] > 10)
 			{
-				escreva("Encontrado na posicao ", i, "\n")
+				contador++
 			}
 		}
+
+		escreva("Quantidade maior que 10: ", contador)
 	}
 }
